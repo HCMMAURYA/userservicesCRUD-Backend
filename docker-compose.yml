@@ -1,0 +1,27 @@
+version: '3'
+services:
+ 
+  create-user-service:
+    build: ./create-user-service
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://armyharish786:ejtESZ6yEQhk6YED@cluster0.ukvpyvk.mongodb.net/
+  read-user-service:
+    build: ./read-user-service
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGO_URI=mongodb+srv://armyharish786:ejtESZ6yEQhk6YED@cluster0.ukvpyvk.mongodb.net/
+  update-user-service:
+    build: ./update-user-service
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGO_URI=mongodb+srv://armyharish786:ejtESZ6yEQhk6YED@cluster0.ukvpyvk.mongodb.net/
+  delete-user-service:
+    build: ./delete-user-service
+    ports:
+      - "3003:3003"
+    environment:
+      - MONGO_URI=mongodb+srv://armyharish786:ejtESZ6yEQhk6YED@cluster0.ukvpyvk.mongodb.net/
